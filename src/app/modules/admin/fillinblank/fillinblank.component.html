@@ -1,0 +1,28 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Main -->
+    <div class="flex-auto p-6 sm:p-10">
+       
+        <mat-chip-listbox aria-label="Fish selection">
+            <mat-chip-option>One fish</mat-chip-option>
+            <mat-chip-option>Two fish</mat-chip-option>
+            <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+            <mat-chip-option color="warn">Warn fish</mat-chip-option>
+          </mat-chip-listbox>
+
+        <!-- CONTENT GOES HERE -->
+        <form class="flex flex-col w-full">
+            <mat-form-field class="w-full">
+              <mat-label>Favorite food</mat-label>
+              <input matInput placeholder="Ex. Pizza" value="Sushi">
+            </mat-form-field>
+          
+            <mat-form-field class="w-full">
+              <mat-label>Leave a comment</mat-label>
+              <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+            </mat-form-field>
+          </form>
+
+    </div>
+
+</div>
