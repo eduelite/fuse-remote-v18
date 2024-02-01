@@ -32,7 +32,7 @@ module.exports = {
         name: "fuse",
         filename: "remoteEntry.js",
         exposes: {
-             './ExampleComponent': './/src/app/modules/component/fm_registerId.component.ts',
+             './FMComponent': './/src/app/modules/component/fm_registerId.component.ts',
         },
 
         // For hosts (please adjust)
