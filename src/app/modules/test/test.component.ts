@@ -18,7 +18,19 @@ export class TestComponent implements AfterViewInit
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
 
     fmComponentRef:any;
-    data:object={};
+    data:object={
+        content:{
+            question: 'this is the exmaple question?'
+        },
+        comoponent:{
+
+        },
+        user:{
+            input:{},
+            score:{},
+            feedback:{}
+        }
+    };
 
     constructor()
     {

@@ -1,5 +1,7 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import {MatRadioModule} from '@angular/material/radio';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
+import {MatRadioGroup, MatRadioModule} from '@angular/material/radio';
+import {CommonModule} from "@angular/common";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
     selector     : 'fm-registerId',
@@ -7,11 +9,13 @@ import {MatRadioModule} from '@angular/material/radio';
     templateUrl  : './fm.component.html',
     encapsulation: ViewEncapsulation.None,
     imports:[
-        MatRadioModule
+       CommonModule, FormsModule, ReactiveFormsModule,  MatRadioModule
     ]
 })
 export class FMComponent
 {
+
+    @Input() data:any;
     /**
      * Constructor
      */
