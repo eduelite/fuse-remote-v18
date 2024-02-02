@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ViewChild, ViewContainerRef, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation} from '@angular/core';
 import {FMComponent} from "../component/fm_registerId.component";
 
 @Component({
@@ -10,7 +10,7 @@ import {FMComponent} from "../component/fm_registerId.component";
         FMComponent
     ]
 })
-export class TestComponent implements AfterViewInit
+export class TestComponent implements  OnInit 
 {
     /**
      * Constructor
@@ -38,7 +38,7 @@ export class TestComponent implements AfterViewInit
 
     }
 
-    ngAfterViewInit(): void {
+    ngOnInit(): void {
 
         console.log(this.testContainer);
         this.fmComponentRef = this.testContainer!.createComponent(FMComponent);
