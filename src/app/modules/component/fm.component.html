@@ -3,8 +3,8 @@
     <!-- Main -->
     <div class="flex-auto">
 
-        <p>{{data.content.question}}</p>
-        <mat-radio-group [(ngModel)]="data.user.input.selection!" ngDefaultControl  [ngModelOptions]="{standalone: true}"        aria-label="Select an option">
+        <p>{{data.component.content.question}}</p>
+        <mat-radio-group [(ngModel)]="data.runtime.data.selection!" ngDefaultControl  [ngModelOptions]="{standalone: true}"        aria-label="Select an option">
             <mat-radio-button value="Option 1">Option 1</mat-radio-button>
             <mat-radio-button value="Option 2">Option 2</mat-radio-button>
         </mat-radio-group>
