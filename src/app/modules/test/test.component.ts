@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,7 +11,7 @@ import {FMComponent} from "../component/fm_registerId.component";
     templateUrl  : './test.component.html',
     encapsulation: ViewEncapsulation.None,    
     imports:[
-        FMComponent,MatButtonModule, RouterLink, MatIconModule
+        FMComponent,MatButtonModule, RouterLink, MatIconModule, CommonModule
     ]
 })
 export class TestComponent implements  OnInit 
