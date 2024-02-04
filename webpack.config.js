@@ -29,10 +29,10 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        name: "fuse",
+        name: "frproject",
         filename: "remoteEntry.js",
         exposes: {
-             './FMComponent': './/src/app/modules/component/fm_registerId.component.ts',
+             './FMComponent': './/src/app/modules/component/fm65bf4799b1a0bc7c6fa3d454.component.ts',
         },
 
         // For hosts (please adjust)
