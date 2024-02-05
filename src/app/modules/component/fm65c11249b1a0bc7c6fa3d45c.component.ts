@@ -48,6 +48,9 @@ export class FMComponent
             Object.values(this.data.component.content.options).forEach( (option:any) => {
         
                 let isCheckedValue:boolean = this.data.runtime.data.answer && this.data.runtime.data.answer.includes (option.key);
+                if( isCheckedValue === null){
+                    isCheckedValue = false;
+                }
                 console.log("option:" + option.key + "-" + isCheckedValue);
 
                 this.checkboxOptions = [
