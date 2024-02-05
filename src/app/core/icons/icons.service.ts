@@ -16,7 +16,7 @@ export class IconsService
         // Register icon sets
         matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('material-twotone.svg'));
         matIconRegistry.addSvgIconSetInNamespace('mat_outline', domSanitizer.bypassSecurityTrustResourceUrl('material-outline.svg'));
-        matIconRegistry.addSvgIconSetInNamespace('mat_solid', domSanitizer.bypassSecurityTrustResourceUrl('/material-solid.svg'));
+        matIconRegistry.addSvgIconSetInNamespace('mat_solid', domSanitizer.bypassSecurityTrustResourceUrl('material-solid.svg'));
         matIconRegistry.addSvgIconSetInNamespace('feather', domSanitizer.bypassSecurityTrustResourceUrl('feather.svg'));
         matIconRegistry.addSvgIconSetInNamespace('heroicons_outline', domSanitizer.bypassSecurityTrustResourceUrl('heroicons-outline.svg'));
         matIconRegistry.addSvgIconSetInNamespace('heroicons_solid', domSanitizer.bypassSecurityTrustResourceUrl('heroicons-solid.svg'));
