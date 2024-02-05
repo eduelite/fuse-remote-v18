@@ -68,10 +68,14 @@ export class FMComponent
     SelectChanged(option){
 
         console.log(option);
+        console.log(this.data.runtime.data.answer);
+
         if(this.data.runtime.data.answer===undefined || this.data.runtime.data.answer){
             this.data.runtime.data.answer = [];
         }
-        
+        console.log("after");
+        console.log(this.data.runtime.data.answer);
+
         if(option && option.isChecked){
 
         if( this.data.runtime.data.answer || !this.data.runtime.data.answer.includes(option.key)){
