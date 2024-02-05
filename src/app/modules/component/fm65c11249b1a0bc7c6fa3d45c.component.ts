@@ -36,7 +36,7 @@ export class FMComponent
 
         this.isLoading = true;
 
-        console.log("data2:");
+        console.log("data3:");
         console.log(this.data);
 
         if(this.data!==undefined && this.data){
@@ -51,7 +51,7 @@ export class FMComponent
                 { 
                     key: option.key,
                     value: option.value,
-                    isChecked:  this.data.runtime.data.answer && this.data.runtime.data.answer.includes (option.key)===null?false:this.data.runtime.data.answer && this.data.runtime.data.answer.includes (option.key)
+                    isChecked:  ((this.data.runtime.data.answer && this.data.runtime.data.answer.includes (option.key))===null)?false:this.data.runtime.data.answer && this.data.runtime.data.answer.includes (option.key)
         
                 },
                 ...this.checkboxOptions
