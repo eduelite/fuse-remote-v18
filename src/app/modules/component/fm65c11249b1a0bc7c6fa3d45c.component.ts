@@ -21,7 +21,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 export class FMComponent
 {
 
-    @Input() data:any;
+    @Input() data?:any;
     /**
      * Constructor
      */
@@ -36,7 +36,10 @@ export class FMComponent
 
         this.isLoading = true;
 
-        if(this.data){
+        console.log("data:");
+        console.log(this.data);
+
+        if(this.data!==undefined && this.data){
 
             if(this.data.runtime.data.answer===undefined || this.data.runtime.data.answer){
                 this.data.runtime.data.answer = [];
@@ -68,6 +71,7 @@ export class FMComponent
     SelectChanged(option){
 
         console.log(option);
+        console.log(this.data);
         console.log(this.data.runtime.data.answer);
 
         if(this.data.runtime.data.answer===undefined || this.data.runtime.data.answer){
