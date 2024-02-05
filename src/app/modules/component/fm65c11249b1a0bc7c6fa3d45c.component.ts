@@ -37,6 +37,7 @@ export class FMComponent
         this.isLoading = true;
 
         if(this.data){
+            
             if(this.data.runtime.data.answer===undefined){
                 this.data.runtime.data.answer = [];
             }
@@ -53,10 +54,12 @@ export class FMComponent
                 ...this.checkboxOptions
                 ];
         
-            });      
+            });  
+            
+            this.isLoading = false;
         }   
         
-        this.isLoading = false;
+       
         console.log(this.checkboxOptions);
 
 

@@ -1,10 +1,10 @@
-<div class="flex flex-col flex-auto min-w-0" *ngIf="data">
+<div class="flex flex-col flex-auto min-w-0">
 
     <ng-container>
 
         <div
             class="max-w-none ml-3 mt-4 prose prose-sm"
-            [innerHTML]="sanitizer.bypassSecurityTrustHtml(data.component.content.question)"></div>
+            [innerHTML]="sanitizer.bypassSecurityTrustHtml(data!.component.content.question)"></div>
         
         <!-- Name -->
         <div class="mt-4" *ngIf="!isLoading">
