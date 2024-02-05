@@ -37,6 +37,13 @@
 						"assets": [
 							"src/favicon-16x16.png",
 							"src/favicon-32x32.png",
+							"src/inter.css",
+							"src/Inter-roman.var.woff2",
+							"src/inter-italic.var.woff2.css",
+							"src/logo.svg",
+							"src/logo-text.svg",
+							"src/logo-text-on-dark.svg",
+							"src/splash-screen.css",
 							"src/assets",
 							{
 								"glob": "_redirects",
