@@ -36,7 +36,7 @@ export class FMComponent
 
         this.isLoading = true;
 
-        console.log("data5:");
+        console.log("data6:");
         console.log(this.data);
 
         if(this.data!==undefined && this.data){
