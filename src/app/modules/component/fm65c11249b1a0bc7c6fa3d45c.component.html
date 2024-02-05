@@ -1,0 +1,21 @@
+<div class="flex flex-col flex-auto min-w-0" *ngIf="data">
+
+    <ng-container>
+
+        <div
+            class="max-w-none ml-3 mt-4 prose prose-sm"
+            [innerHTML]="sanitizer.bypassSecurityTrustHtml(data.component.content.question)"></div>
+        
+        <!-- Name -->
+        <div class="mt-4" *ngIf="!isLoading">
+
+            <mat-checkbox  *ngFor="let option of checkboxOptions" [(ngModel)]="option.isChecked" (ngModelChange)="SelectChanged(option)" [value]="option.key"> {{ option.value}}</mat-checkbox>
+    
+        </div>    
+    
+    
+    </ng-container>
+    
+    
+
+</div>

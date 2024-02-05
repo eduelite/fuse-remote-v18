@@ -4,7 +4,7 @@ import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import {FMComponent} from "../component/fm65c0787cb1a0bc7c6fa3d459.component";
+import {FMComponent} from "../component/fm65c11249b1a0bc7c6fa3d45c.component";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
