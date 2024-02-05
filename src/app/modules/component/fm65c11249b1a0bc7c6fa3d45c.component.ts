@@ -26,60 +26,62 @@ export class FMComponent
      * Constructor
      */
      checkboxOptions:any=[];
-  isLoading:boolean = true;
+    isLoading:boolean = true;
 
-  constructor(public sanitizer:DomSanitizer){
+    constructor(public sanitizer:DomSanitizer){
 
-    
-  }
-  ngOnInit(): void {
+        
+    }
+    ngOnInit(): void {
 
-    this.isLoading = true;
+        this.isLoading = true;
 
-    if(this.data.runtime.data.answer===undefined){
-      this.data.runtime.data.answer = [];
+        if(this.data){
+            if(this.data.runtime.data.answer===undefined){
+                this.data.runtime.data.answer = [];
+            }
+        
+            Object.values(this.data.component.content.options).forEach( (option:any) => {
+        
+                this.checkboxOptions = [
+                { 
+                    key: option.key,
+                    value: option.value,
+                    isChecked:  this.data.runtime.data.answer && this.data.runtime.data.answer.includes (option.key)
+        
+                },
+                ...this.checkboxOptions
+                ];
+        
+            });      
+        }   
+        
+        this.isLoading = false;
+        console.log(this.checkboxOptions);
+
+
     }
 
-    Object.values(this.data.component.content.options).forEach( (option:any) => {
+    SelectChanged(option){
 
-      this.checkboxOptions = [
-        { 
-          key: option.key,
-          value: option.value,
-          isChecked:  this.data.runtime.data.answer && this.data.runtime.data.answer.includes (option.key)
+        console.log(option);
+        if(option.isChecked){
 
-        },
-        ...this.checkboxOptions
-      ];
+        if( this.data.runtime.data.answer || !this.data.runtime.data.answer.includes(option.key)){
+            
+            this.data.runtime.data.answer = [...this.data.runtime.data.answer, option.key];
+        }
 
-    });
+        }
+        else{
 
-    this.isLoading = false;
-    console.log(this.checkboxOptions);
+        if( this.data.runtime.data.answer && this.data.runtime.data.answer.includes(option.key)){
+            this.data.runtime.data.answer  = this.data.runtime.data.answer.filter(item => item !== option.key);
+        }
 
-
-  }
-
-  SelectChanged(option){
-
-    console.log(option);
-    if(option.isChecked){
-
-       if( this.data.runtime.data.answer || !this.data.runtime.data.answer.includes(option.key)){
-          
-          this.data.runtime.data.answer = [...this.data.runtime.data.answer, option.key];
-       }
+        }
+        console.log(this.data.runtime.data.answer);
 
     }
-    else{
-
-      if( this.data.runtime.data.answer && this.data.runtime.data.answer.includes(option.key)){
-        this.data.runtime.data.answer  = this.data.runtime.data.answer.filter(item => item !== option.key);
-      }
-
-    }
-    console.log(this.data.runtime.data.answer);
-
-  }
   
 }
