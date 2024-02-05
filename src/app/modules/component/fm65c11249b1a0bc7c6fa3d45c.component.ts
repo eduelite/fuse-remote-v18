@@ -74,7 +74,8 @@ export class FMComponent
         console.log(this.data);
         console.log(this.data.runtime.data.answer);
 
-        if(this.data.runtime.data.answer===undefined || this.data.runtime.data.answer){
+        if(this.data.runtime.data.answer===undefined || this.data.runtime.data.answer===null){
+            console.log("enter answer");
             this.data.runtime.data.answer = [];
         }
         console.log("after");
