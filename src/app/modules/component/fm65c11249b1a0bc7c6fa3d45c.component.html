@@ -9,7 +9,7 @@
         <!-- Name -->
         <div class="mt-4" *ngIf="!isLoading">
 
-            <mat-checkbox  *ngFor="let option of checkboxOptions" [(ngModel)]="option!.isChecked"  [ngModelOptions]="{standalone: true}"  (click)="SelectChanged(option)"  [value]="option.key"> {{ option.value}}</mat-checkbox>
+            <mat-checkbox  *ngFor="let option of checkboxOptions" [checked]="option!.isChecked"  [ngModelOptions]="{standalone: true}"  (click)="SelectChanged(option)"  [value]="option.key"> {{ option.value}}</mat-checkbox>
     
         </div>    
     

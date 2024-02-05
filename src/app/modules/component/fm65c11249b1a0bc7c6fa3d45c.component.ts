@@ -87,6 +87,14 @@ export class FMComponent
         console.log("after");
         console.log(this.data.runtime.data.answer);
 
+        if(option.isChecked==null){
+            option.isChecked = true;
+        }
+        else{
+            option.isChecked = !option.isChecked;
+            
+        }
+
         if(option && option.isChecked){
 
         if( this.data.runtime.data.answer || !this.data.runtime.data.answer.includes(option.key)){
