@@ -37,7 +37,7 @@ export class FMComponent
         this.isLoading = true;
 
         if(this.data){
-            
+
             if(this.data.runtime.data.answer===undefined){
                 this.data.runtime.data.answer = [];
             }
@@ -68,7 +68,7 @@ export class FMComponent
     SelectChanged(option){
 
         console.log(option);
-        if(option.isChecked){
+        if(option && option.isChecked){
 
         if( this.data.runtime.data.answer || !this.data.runtime.data.answer.includes(option.key)){
             
