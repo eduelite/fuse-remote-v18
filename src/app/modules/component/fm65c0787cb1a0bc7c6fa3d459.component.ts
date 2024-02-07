@@ -25,5 +25,9 @@ export class FMComponent
      * Constructor
      */
      constructor(public sanitizer:DomSanitizer){}
+
+     Select(key){
+         this.data.runtime.data.answer = key;
+     }
   
 }

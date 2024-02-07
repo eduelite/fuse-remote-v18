@@ -11,8 +11,8 @@
             
             <mat-radio-group
                 aria-labelledby="example-radio-group-label"                    
-                [(ngModel)]="data.runtime.data.answer">
-                <mat-radio-button class="example-radio-button" *ngFor="let option of data.component.content.options | keyvalue" value="{{ $any(option.value).key}}">
+                [value]="data.runtime.data.answer">
+                <mat-radio-button (click)="Select($any(option.value).key)" class="example-radio-button" *ngFor="let option of data.component.content.options | keyvalue" value="{{ $any(option.value).key}}">
                     {{ $any(option.value).value}}
                 </mat-radio-button>
             </mat-radio-group>
