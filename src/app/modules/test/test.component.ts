@@ -4,7 +4,7 @@ import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import {FMComponent} from "../component/fm65c0787cb1a0bc7c6fa3d459.component";
+import {FMComponent} from "../component/fm65c4645d50c81836f571047b.component";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
@@ -23,29 +23,16 @@ export class TestComponent implements  OnInit
     /**
      * Constructor
      */
-    @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
-  
+    @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;  
+    
     reactiveComponent={
         component:{
           content:{
-              question: "input the question here?",
-              options:{
-                option1: {
-                    key:"1",
-                    value:"option 1"
-                },
-                option2:{
-                    key:"2",
-                    value:"option 2"
-                },
-                option3:{
-                    key:"3",
-                    value:"option 3"
-                }
-              }
-
+            source: "https://eduelite.github.io/AppResource/Rs4772ca96-18a0-4063-a655-eab6af8ada4a.svg"
           },
-          ui:{},      
+          ui:{
+             size: 'h-12 w-12'
+          },      
         },
         runtime:{
           data:{

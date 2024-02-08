@@ -8,9 +8,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-    selector     : 'fm-65c0787cb1a0bc7c6fa3d459',
+    selector     : 'fm-65c4645d50c81836f571047b',
     standalone   : true,
-    templateUrl  : './fm65c0787cb1a0bc7c6fa3d459.component.html',
+    templateUrl  : './fm65c4645d50c81836f571047b.component.html',
     encapsulation: ViewEncapsulation.None,
     imports:[
        CommonModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatIconModule,MatRadioModule
@@ -24,10 +24,6 @@ export class FMComponent
     /**
      * Constructor
      */
-     constructor(public sanitizer:DomSanitizer){}
-
-     Select(key){
-         this.data.runtime.data.answer = key;
-     }
+     constructor(public sanitizer:DomSanitizer){}    
   
 }
