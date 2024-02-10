@@ -4,7 +4,7 @@ import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import {FMComponent} from "../component/fm65bf4799b1a0bc7c6fa3d454.component";
+import {FMComponent} from "../component/fm65c7b68677b3d63f17a63905.component";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
@@ -26,35 +26,44 @@ export class TestComponent implements  OnInit
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;
   
     reactiveComponent={
-        component:{
-          content:{
-              question: "input the question here?",
-              options:{
-                option1: {
-                    key:"1",
-                    value:"option 1"
-                },
-                option2:{
-                    key:"2",
-                    value:"option 2"
-                },
-                option3:{
-                    key:"3",
-                    value:"option 3"
-                }
+        component: {
+          content: {
+            colNames: [
+              "id",
+              "name",
+              "age",
+              "city"
+            ],
+            data: [
+              {
+                "id": 1,
+                "name": "John",
+                "age": 30,
+                "city": "New York"
+              },
+              {
+                "id": 2,
+                "name": "Alice",
+                "age": 25,
+                "city": "Los Angeles"
+              },
+              {
+                "id": 3,
+                "name": "Bob",
+                "age": 35,
+                "city": "Chicago"
               }
-
+            ]
           },
-          ui:{},      
+          ui: {}
         },
-        runtime:{
-          data:{
-             
-          },
-          score:{},
-          feedback:{}
+        runtime: {
+          data: {},
+          score: {},
+          feedback: {}
         }
-      };
+      }
+                      
   
     constructor()
     {
