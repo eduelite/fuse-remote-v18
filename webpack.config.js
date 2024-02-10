@@ -32,7 +32,7 @@ module.exports = {
         name: "frproject",
         filename: "remoteEntry.js",
         exposes: {
-             './FMComponent65c4645d50c81836f571047b': './/src/app/modules/component/fm65c4645d50c81836f571047b.component.ts',
+             './FMComponent65c64e0e3d65ba0c4c96f206': './/src/app/modules/component/fm65c64e0e3d65ba0c4c96f206.component.ts',
         },
 
         // For hosts (please adjust)

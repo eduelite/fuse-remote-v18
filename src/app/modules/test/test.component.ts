@@ -4,7 +4,7 @@ import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
-import {FMComponent} from "../component/fm65c4645d50c81836f571047b.component";
+import {FMComponent} from "../component/fm65c64e0e3d65ba0c4c96f206.component";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
@@ -26,14 +26,12 @@ export class TestComponent implements  OnInit
     @ViewChild('test', {read:ViewContainerRef}) testContainer!: ViewContainerRef;  
     
     reactiveComponent={
-        component:{
-          content:{
-            source: "https://eduelite.github.io/AppResource/Rs4772ca96-18a0-4063-a655-eab6af8ada4a.svg"
-          },
-          ui:{
-             size: 'h-12 w-12'
-          },      
+      component: {
+        content: {
+          htmltext: "<p>In this approach:</p><ul><li>We store information about the loaded remote module (such as the remote entry URL and exposed module) in <code style=\"color: var(--tw-prose-code);\">localStorage</code>.</li><li>We load the remote module dynamically using <code style=\"color: var(--tw-prose-code);\">loadRemoteModule</code>.</li><li>When we need to use the loaded module again, we retrieve the module information from <code style=\"color: var(--tw-prose-code);\">localStorage</code> and re-import the remote module dynamically using <code style=\"color: var(--tw-prose-code);\">loadRemoteModule</code>.</li></ul><p>This approach allows you to save and reload information about the loaded remote module without directly serializing the module object, which can be challenging due to the dynamic nature of module federation.</p>"
         },
+        ui: {}
+      },
         runtime:{
           data:{
              
