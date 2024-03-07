@@ -41,7 +41,7 @@ export class FMComponent
 
         if(this.data!==undefined && this.data){
 
-            if(this.data.runtime.data.answer===undefined || this.data.runtime.data.answer){
+            if(this.data.runtime.data.answer===undefined || this.data.runtime.data.answer===null){
                 this.data.runtime.data.answer = [];
             }
         
