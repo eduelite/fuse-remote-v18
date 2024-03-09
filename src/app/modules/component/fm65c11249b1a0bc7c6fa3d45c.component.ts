@@ -40,10 +40,6 @@ export class FMComponent
         console.log(this.data);
 
         if(this.data!==undefined && this.data){
-
-            if(this.data.runtime.data.answer===undefined || this.data.runtime.data.answer===null){
-                this.data.runtime.data.answer = [];
-            }
         
             Object.values(this.data.component.content.options).forEach( (option:any) => {
         
