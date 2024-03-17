@@ -25,7 +25,7 @@ export class FMComponent
     /**
      * Constructor
      */
-     checkboxOptions:any=[];
+    checkboxOptions:any=[];
     isLoading:boolean = true;
 
     constructor(public sanitizer:DomSanitizer){

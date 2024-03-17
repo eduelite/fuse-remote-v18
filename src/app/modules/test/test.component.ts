@@ -49,7 +49,7 @@ export class TestComponent implements  OnInit
         },
         runtime:{
           data:{
-             
+             answer:["1","2"]
           },
           score:{},
           feedback:{}
