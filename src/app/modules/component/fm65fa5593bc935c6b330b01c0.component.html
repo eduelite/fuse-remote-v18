@@ -1,0 +1,15 @@
+<div class="flex min-w-0" *ngIf="data">
+
+    <div *ngFor="let datafield of data.component.content.datafields | keyvalue" class="flex">
+
+        <div
+        class="max-w-none ml-4"
+        [innerHTML]="datafield.value.label"></div>
+        <div class="ml-2">{{datafield.value.value}}</div>
+    
+
+    </div>
+        
+    
+
+</div>

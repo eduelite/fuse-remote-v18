@@ -1,0 +1,60 @@
+<div class="flex flex-col flex-auto w-full" *ngIf="data">
+  
+      <mat-card>
+        <mat-card-header class="flex felx-col">
+          <mat-card-title class="font-extrabold text-3xl w-60">Word Info</mat-card-title>
+          <mat-form-field 
+          class="fuse-mat-rounded fuse-mat-dense w-full"
+          [subscriptSizing]="'dynamic'">
+         
+          <input class="white"
+              matInput
+              [(ngModel)]="data.component.content.word"
+              [ngModelOptions]="{standalone: true}"   
+              [autocomplete]="'off'"
+              [placeholder]="'Search word'"                            
+              #searchField>            
+
+      </mat-form-field>
+      <button (click)="SearchWord()" mat-icon-button >
+        <mat-icon
+        
+        matSuffix
+        class="icon-size-5"
+        [svgIcon]="'heroicons_solid:home'"></mat-icon>
+    </button>
+        </mat-card-header>
+        <mat-card-content>
+         
+          <ng-container *ngIf="data.runtime.data.response">
+          <div *ngFor="let wordInfo of data.runtime.data.response" class="flex flex-col space-y-4">
+           
+              <div class="flex felx-col mt-4 content-evenly">
+                  <div class="py-4"><mat-icon [svgIcon]="'heroicons_outline:home'"></mat-icon></div>
+                  <div class="ml-2 py-4 font-extrabold leading-6">{{wordInfo.word}}</div>
+                  <div class="ml-4" *ngFor="let phonetic of wordInfo.phonetics">
+                    <audio *ngIf="phonetic.audio!==null && phonetic.audio!==''"  controls>
+                      <source [src]="phonetic.audio" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
+                  </div>                
+              </div>
+      
+              <div *ngFor="let meaning of wordInfo.meanings" class="flex flex-auto flex-col">
+                  <div class="flex">
+                  <mat-icon [svgIcon]="'heroicons_outline:home'"></mat-icon>
+                  <div class="max-w-none ml-2 prose prose-sm" [innerHTML]="meaning.partOfSpeech"></div>
+                  </div>
+                  <ul>
+                    <li *ngFor="let definition of meaning.definitions">{{definition.definition}}</li>
+                  </ul>
+              </div>  
+          </div>
+         </ng-container>
+        </mat-card-content>
+        
+      </mat-card>
+   
+    
+
+</div>

@@ -1,0 +1,16 @@
+<div class="flex  min-w-0" *ngIf="data">
+
+    <ng-container>
+
+        <!-- Name -->
+        <div
+        class="max-w-none ml-2"
+        [innerHTML]="data.component.content.label"></div>
+
+        <div> {{data.component.content.value}}</div>
+    
+    </ng-container>
+    
+    
+
+</div>
