@@ -19,6 +19,7 @@ import { Injectable } from "@angular/core";
 
     build(domain:string = 'http://localhost:10139/v3/edu/ApiProxy/'){
         this.domain = domain;
+        return this;
     }
 
     callAPI(apiId:string, request:any){
