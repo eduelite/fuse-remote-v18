@@ -8,7 +8,10 @@ sharedMappings.register(
   path.join(__dirname, 'tsconfig.json'),
   [/* mapped paths to share */]);
 
+  const registerKey = "component65c64e0e3d65ba0c4c96f206a69fdeb264a449e3aa05237a71db44a7test"; 
+
 module.exports = {
+
   output: {
     uniqueName: "fuse",
     publicPath: "auto"
@@ -29,10 +32,10 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        name: "frproject",
-        filename: "remoteEntry.js",
+        name: registerKey,
+        filename: "remoteEntry-${registerKey}.js",
         exposes: {
-             './FMComponent': './/src/app/modules/component/fm65c0787cb1a0bc7c6fa3d459.component.ts',
+          [`./${registerKey}`]: './/src/app/modules/component/${registerKey}.component.ts',
         },
 
         // For hosts (please adjust)
